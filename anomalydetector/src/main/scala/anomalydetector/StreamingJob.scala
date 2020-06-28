@@ -39,7 +39,7 @@ object StreamingJob {
     //      .writeAsText("./src/main/data/clicks.txt")
     //      .setParallelism(1)
 
-
+    // Click through rate
     source_displays
       .union(source_clicks)
       .keyBy(new KeySelector[ObjectNode, String] {
@@ -61,7 +61,7 @@ object StreamingJob {
       .setParallelism(1)
     //        .print
 
-
+    // Click through rate
     source_clicks
       .keyBy(new KeySelector[ObjectNode, String] {
         override def getKey(in: ObjectNode): String = in.get("value").get("ip").asText()
@@ -69,7 +69,7 @@ object StreamingJob {
       .process(new TimingDetector)
       .writeAsText("./src/main/data/clicks_ip_time.txt")
       .setParallelism(1)
-    //        .print
+//            .print
 
     source_clicks.keyBy(new KeySelector[ObjectNode, String] {
       override def getKey(in: ObjectNode): String = in.get("value").get("uid").asText()
@@ -84,7 +84,7 @@ object StreamingJob {
   }
 }
 
-// TODO : Please delete text files before running Job
+// TODO : Please delete data text files before running Job
 
 
 

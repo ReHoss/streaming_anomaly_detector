@@ -40,15 +40,15 @@ class TimingDetector extends KeyedProcessFunction[String, ObjectNode, String] {
 
     if (flagState.value == null) {
       flagState.update(true)
-      val timer = context.timerService.currentProcessingTime + TimingDetector.TOTAL_TIME
-      context.timerService.registerProcessingTimeTimer(timer)
-      timerState.update(timer)
+//      val timer = context.timerService.currentProcessingTime + TimingDetector.TOTAL_TIME
+//      context.timerService.registerProcessingTimeTimer(timer)
+//      timerState.update(timer)
     }
     else if (flagState.value == true) {
 
-      val timer = context.timerService.currentProcessingTime + TimingDetector.TOTAL_TIME
-      context.timerService.registerProcessingTimeTimer(timer)
-      timerState.update(timer)
+//      val timer = context.timerService.currentProcessingTime + TimingDetector.TOTAL_TIME
+//      context.timerService.registerProcessingTimeTimer(timer)
+//      timerState.update(timer)
 
       // Collect anormal entry
       val node = TimingDetector.MAPPER.writeValueAsString(click.get("value"))
