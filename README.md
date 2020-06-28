@@ -4,13 +4,14 @@ Class project: flink anomaly detector. Fraudulent pattern detection on web traff
 
 ## File descriptions :
 
-anomalydetector: folder containing the final Flink app ! Please delete files presents in anomalydetector/src/main/data/ before launching the app because the app will create the output files in this directory. The abnormal events will be written in this directory (hence the directory must be empty before launching the job).
+- anomalydetector: folder containing the final Flink app ! Please delete files presents in anomalydetector/src/main/data/ before launching the app because the app will create the output files in this directory. The abnormal events will be written in this directory (hence the directory must be empty before launching the job).
 
-data: contains data used for the offline anomaly analysis on a Jupyter notebook.
+- data: contains data used for the offline anomaly analysis on a Jupyter notebook.
 
-drafts: contains draft files used to create the application and to perform some tests and try different Flink objects.
+- drafts: contains draft files used to create the application and to perform some tests and try different Flink objects.
 
-notebooks: contains analysis of the data extracted using a Flink Kafka connector to consume topics.
+- notebooks: contains analysis of the data extracted using a Flink Kafka connector to consume topics.
+
 
 
 ## App design :
