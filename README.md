@@ -22,3 +22,6 @@ Basic Flink anomaly detector. Fraudulent pattern detection on web traffic.
 - Two differents detector are build, one looking for suspicious frequency patterns, the other one checking the click through rate.
 
 Thank you !!!
+
+Rémy Hosseinkhan
+Anas Lahrech
